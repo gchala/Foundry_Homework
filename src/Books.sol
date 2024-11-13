@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.13;
 
-contract Books {
+contract Books {  // Capitalized 'Books'
     address owner;
 
     struct Book {
@@ -12,7 +12,7 @@ contract Books {
 
     Book public book;
 
-    modifier onlyOwner {
+    modifier onlyOwner {  // Lowercase "o" in "onlyOwner"
         require(msg.sender == owner, "You are not the Owner");
         _;
     }
@@ -24,11 +24,11 @@ contract Books {
         owner = msg.sender;
     }
 
-    function update_pages(uint256 _pages) public onlyOwner {
+    function update_pages(uint256 _pages) public onlyOwner {  // Lowercase with underscore
         book.pages = _pages;
     }
 
-    function get_book() public view returns (Book memory) {
+    function get_book() public view returns (Book memory) {  // Lowercase with underscore
         return book;
     }
 }

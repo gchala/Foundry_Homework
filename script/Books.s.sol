@@ -7,7 +7,7 @@ import "../src/Books.sol";
 contract DeployBooks is Script {
     function run() external {
         vm.startBroadcast();
-        new Books("Programming Foundry", "Anush", 100); // Replace "Anush" with your name
+        new Books("Programming Foundry", "gchala", 100);  // Correct capitalization and values
         vm.stopBroadcast();
     }
 }
